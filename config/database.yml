@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: tfa-corp-db-production
+  database: d80ftgoehu8jf2
   pool: 5
   timeout: 5000
