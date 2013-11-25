@@ -77,4 +77,9 @@ TfaCorp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+
+  config.corp_id = "1"
+  config.corp_key = "31e083a5c06d4cf9e4ee2a426f3438c8"
+  config.tfa_server_uri = "http://tfa-server.herokuapp.com"
 end

@@ -1,7 +1,12 @@
-<h1>Send OTP to TFA server</h1>
+<h1>Send OTP to 2nd factor authenticator</h1>
+<pre>
+tfa_server_uri = <%= Rails.application.config.tfa_server_uri %>
+corp_id = <%= Rails.application.config.corp_id %>
+corp_key = <%= Rails.application.config.corp_key %>
+</pre>
 <form method="post" action="/callers/sign_in">
-  corp_id<br>
-  <input type="text" name="corp_id" value="1"><br>
+  user_id<br>
+  <input type="text" name="user_id" value="1"><br>
   otp<br>
   <input type="text" name="otp" size="200"><br>
   <input type="submit">

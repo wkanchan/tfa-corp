@@ -26,4 +26,8 @@ TfaCorp::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.corp_id = "1"
+  config.corp_key = "31e083a5c06d4cf9e4ee2a426f3438c8"
+  config.tfa_server_uri = "http://localhost:3000"
 end
