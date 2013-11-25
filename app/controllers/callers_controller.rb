@@ -2,7 +2,22 @@ class CallersController < ApplicationController
   require "net/http"
   require "uri"
 
-  def sign_in
+  def sign_in_1
+    # Check parameters
+    if params[:user_id].nil? or params[:password].nil?
+      @result = "{ result: 0, message: 'Require user_id and otp parameters' }"
+      return
+    end
+
+    if params[:user_id] == '1' and params[:password] == '12345678'
+      @result = "{ result: 1, message: '1st authen successful. Send me OTP now.' }"
+      return
+    else
+      @result = "{ result: 0, message: 'Wrong user_id or password' }"
+    end
+  end
+
+  def sign_in_2
 =begin
     # Check parameters
     if params[:user_id].nil? or params[:otp].nil?
