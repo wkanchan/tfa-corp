@@ -6,11 +6,8 @@ TfaCorp::Application.routes.draw do
   get "static_pages/home"
   get "static_pages/help"
 
-  # 1st authentication
-  post "sign_in/1" => "callers#sign_in_1"
-
   # 2nd authentication
-  post "sign_in/2" => "callers#sign_in_2"
+  post "users/secondauth" => "callers#secondauth"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
