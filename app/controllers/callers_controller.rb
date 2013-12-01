@@ -47,9 +47,15 @@ class CallersController < ApplicationController
     }
     response = Net::HTTP.post_form(uri, query)
     if response.code != "200"
-      @result = "{ result: 0, message: 'Could not connect to 2nd factor authenticator.' }"
+      @result.result = 0
+      @result.message = 'Could not connect to 2nd factor authenticator.'
     else
-      @result = response.body
+      @result = response.body.to_json
     end
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @result }
+    end
   end
 end
