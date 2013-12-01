@@ -4,7 +4,7 @@ tfa_server_uri = <%= Rails.application.config.tfa_server_uri %>
 corp_id = <%= Rails.application.config.corp_id %>
 corp_key = <%= Rails.application.config.corp_key %>
 </pre>
-<form method="post" action="/sign_in/2.json">
+<form method="post" action="/users/secondauth.json">
   user_id<br>
   <input type="text" name="user_id" value="1"><br>
   otp<br>
