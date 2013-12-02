@@ -1,5 +1,4 @@
 <h1>OTP generator</h1>
-<pre><%= raw @result %></pre>
 <form method="get" action="/static_pages/help">
   key<br>
   <input type="text" name="key" value="31e083a5c06d4cf9e4ee2a426f3438c8" size="100"><br>
@@ -11,3 +10,6 @@
   <input type="text" name="passcode" size="200"><br>
   <input type="submit">
 </form>
+
+RESULT<br>
+<input type="text" value="<%= raw @result %>" size="200">
